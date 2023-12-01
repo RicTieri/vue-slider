@@ -35,7 +35,9 @@ createApp({
     },
     methods: {
         moveTo(n) {
+            this.stopSlideShow();
             this.activeIndex = n;
+            this.startSlideShow();
         },
         nextPic() {
             this.stopSlideShow();
