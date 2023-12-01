@@ -27,10 +27,10 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
-                    <div class="thumb" v-for="data in slides">
-                        <img :src="data.image" :alt="data.tilte" />
+                    <div class="prev" @click="prevPic()"></div>
+                    <div class="next" @click="nextPic()"></div>
+                    <div class="thumb" v-for="(data, i) in slides">
+                        <img :src="data.image" :alt="data.tilte" @click="moveTo(i)"/>
                     </div>
                 </div>
 
