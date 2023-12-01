@@ -11,12 +11,12 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" >
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="stopSlideShow()" @mouseleave="startSlideShow()">
                     <img :src="slides[activeIndex].image" :alt="slides[activeIndex].tilte" />
                     <div class="text">
                         <h3>{{slides[activeIndex].title}}</h3>
